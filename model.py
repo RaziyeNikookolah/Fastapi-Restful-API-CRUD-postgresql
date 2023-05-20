@@ -1,4 +1,3 @@
-import model
 from sqlalchemy import column, Integer, String
 from config import Base
 

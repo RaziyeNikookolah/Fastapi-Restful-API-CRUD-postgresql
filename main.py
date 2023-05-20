@@ -1,6 +1,13 @@
 from fastapi import FastAPI
-app=FastAPI()
+from config import engin
+import model
 
-@app.get('/')
+app = FastAPI()
+
+
+@app.get("/")
 async def home():
     return "Welcome Home"
+
+
+model.Base.metadata.create_all(bind=engin)
